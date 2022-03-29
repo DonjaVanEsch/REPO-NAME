@@ -85,6 +85,7 @@ code {
 }
 
 /* Colors */
+/*
 .color-0
 {
     background-color: var(--color-0);
@@ -124,8 +125,9 @@ code {
 {
     background-color: var(--color-7);
 }
-
+*/
 /* Grid Square */
+/*
 .grid-square {
   border-style: solid;
   width: var(--tile-size);
@@ -136,6 +138,7 @@ code {
   border-right-color: var(--border-right-color);
   border-bottom-color: var(--border-bottom-color);
 }
+*/
 
 * {
   box-sizing: border-box;
