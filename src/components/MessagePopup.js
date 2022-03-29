@@ -1,13 +1,22 @@
 import React from 'react'
-import styles from '../css/MessagePopup.module.css'
+import { useSelector } from 'react-redux'
+//import styles from '../css/MessagePopup.module.css'
 
 // Displays a message
 
 export default function MessagePopup(props) {
+    const isRunning = useSelector((state) => state.game.isRunning )
+    const gameOver = useSelector((state) => state.game.gameOver )
+    const className = isRunning && !gameOver ? 'hidden' : ''
+
+    let msgText = '';
+    msgText = isRunning ? '': 'Paused'
+    msgText = gameOver ? 'Game Over': ''
+
     return (
-        <div className={styles.messagepopup}>
+        <div className={`messagepopup ${className}`}>
             <h1>Message Title</h1>
-            <p>Message info...</p>
+            <p>{msgText}</p>
         </div>
     )
 }

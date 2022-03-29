@@ -84,62 +84,6 @@ code {
 
 }
 
-/* Colors */
-/*
-.color-0
-{
-    background-color: var(--color-0);
-}
-
-.color-1
-{
-    background-color: var(--color-1);
-}
-
-.color-2
-{
-    background-color: var(--color-2);
-}
-
-.color-3
-{
-    background-color: var(--color-3);
-}
-
-.color-4
-{
-    background-color: var(--color-4);
-}
-
-.color-5
-{
-    background-color: var(--color-5);
-}
-
-.color-6
-{
-    background-color: var(--color-6);
-}
-
-.color-7
-{
-    background-color: var(--color-7);
-}
-*/
-/* Grid Square */
-/*
-.grid-square {
-  border-style: solid;
-  width: var(--tile-size);
-  height: var(--tile-size);
-  border-width: var(--border-width);
-  border-left-color: var(--border-left-color);
-  border-top-color: var(--border-top-color);
-  border-right-color: var(--border-right-color);
-  border-bottom-color: var(--border-bottom-color);
-}
-*/
-
 * {
   box-sizing: border-box;
 }
@@ -193,4 +137,20 @@ code {
   border-left-color: var(--button-color-l);
   border-right-color: var(--button-color-r);
   border-bottom-color: var(--button-color-b);
+}
+
+/* Message Popup Styles */
+.messagepopup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--tile-size) * 10);
+  height: calc(var(--tile-size) * 10);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.messagepopup.hidden {
+  display: none;
 }
