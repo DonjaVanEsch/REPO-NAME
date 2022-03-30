@@ -43,7 +43,19 @@ import {
             return { ...state, y: maybeY }
         }
         // If not place the block
-        const newGrid = addBlockToGrid(shape, grid, x, y, rotation)
+        // ( this returns an object with a grid and gameover bool )
+        const obj = addBlockToGrid(shape, grid, x, y, rotation)
+        const newGrid = obj.grid
+        const gameOver = obj.gameOver
+
+        if ( gameOver ) {
+          // Game over
+          const newState = {...state}
+          newState.shape = 0
+          newState.grid = newGrid
+          return { ...state, gameOver: true }
+        }
+
         // reset some things to start a new shape/block
         const newState = defaultState()
         newState.grid = newGrid

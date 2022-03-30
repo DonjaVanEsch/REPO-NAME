@@ -11,7 +11,8 @@ export default function MessagePopup(props) {
 
     let msgText = '';
     msgText = gameOver ? 'Game Over': ''
-    msgText = isRunning ? '': 'Paused'    
+    if ( msgText == '' )
+        msgText = isRunning ? '': 'Paused'    
 
     return (
         <div className={`messagepopup ${className}`}>        
