@@ -1,5 +1,5 @@
 /* Message Popup Styles */
-.messagepopup {
+.mp {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -10,6 +10,6 @@
     text-align: center;
   }
 
-  .messagepopup.hidden {
+  .mp.hidden {
     display: none;
   }

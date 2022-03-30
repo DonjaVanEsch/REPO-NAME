@@ -14,7 +14,7 @@ export default function MessagePopup(props) {
     msgText = gameOver ? 'Game Over': ''
 
     return (
-        <div className={`messagepopup ${className}`}>
+        <div className={`messagepopup ${className}`}>        
             <h1>Message Title</h1>
             <p>{msgText}</p>
         </div>
