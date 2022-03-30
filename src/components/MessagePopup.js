@@ -10,13 +10,12 @@ export default function MessagePopup(props) {
     const className = isRunning && !gameOver ? 'hidden' : ''
 
     let msgText = '';
-    msgText = isRunning ? '': 'Paused'
     msgText = gameOver ? 'Game Over': ''
+    msgText = isRunning ? '': 'Paused'    
 
     return (
         <div className={`messagepopup ${className}`}>        
-            <h1>Message Title</h1>
-            <p>{msgText}</p>
+            <h1>{msgText}</h1>            
         </div>
     )
 }
